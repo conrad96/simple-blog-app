@@ -1,0 +1,15 @@
+.chk-district{
+    margin: 10px;
+}
+
+.list-districts li {
+    display: inline;
+}
+
+#search{
+    margin-top: 30px;
+}
+
+.districts-label{
+    margin-top: 15px;
+}
