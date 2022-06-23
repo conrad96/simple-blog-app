@@ -1,6 +1,5 @@
 .weather-forecast-section{
     display: grid;
-    border: 1px solid red;
     column-gap: 25px;
 }
 
