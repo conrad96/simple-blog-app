@@ -8,7 +8,7 @@ class WeatherForecast extends React.Component{
         const {lat, lon} = this.props;
 
         //fetch axios data
-        const weatherResults = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_API_KEY}`).then((res)=> {
+        const weatherResults = axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_API_KEY}&units=metric`).then((res)=> {
 
             this.setState({results: res.data});
         });
@@ -16,7 +16,8 @@ class WeatherForecast extends React.Component{
 
     displayResults = () => {
         if(this.state.results.length != 0 ){
-            const {coord, weather, wind} = this.state.results;
+            // console.log(this.state.results);
+            const {coord, weather, wind, main} = this.state.results;
 
             return (`
             <div className="col-md-3">
@@ -27,6 +28,7 @@ class WeatherForecast extends React.Component{
                         <p class="card-text">
                             <ul>
                                 <li>Weather description: ${weather[0].description}</li>
+                                <li>Temperature: ${main.temp} (celsius)</li>
                                 <li>Coordinates:  ${coord.lat}, ${coord.lon}</li>
                                 <li>Wind: ${wind.speed}</li>
                             </ul>
