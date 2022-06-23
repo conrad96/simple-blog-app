@@ -16,7 +16,7 @@ class  App extends React.Component {
             { id: 7, name: "rukungiri", lat: "-0.790590", long: "29.926439"},
             { id: 8, name: "lyantonde", lat: "-0.365470", long: "31.155520"},
             { id: 9, name: "kasese", lat: "0.1309553", long: "30.0046209"},
-            { id: 9, name: "fortportal", lat: "0.6508416", long: "30.272629"}
+            { id: 10, name: "fortportal", lat: "0.6508416", long: "30.272629"}
           ]
         
         return districts.map(district => {
@@ -29,8 +29,7 @@ class  App extends React.Component {
         <>
             <div className="container">
                 <Header />
-                <div className="row">
-                    {/* <WeatherForecast /> */}
+                <div className="row align-items-start">
                     {this.fetchDistrictWeatherForecast()}
                 </div>
             </div>
