@@ -1,10 +1,15 @@
-# Weather Forecast Application
+# simple dashboard simulation for blog
+1. home page
+    - guest page view published posts
 
-1. View forecast data of below entries: 
-    [
-        { id: 1, name: "kabale", lat: "-1.248230", long: "29.984690" },
-        { id: 2, name: "kisoro", lat: "-1.218060", long: "29.682050" },
-        { id: 3, name: "katuna", lat: "-1.416880", long: "30.007690" }
-    ]
-2. fetch weather forecast
-3. view forecast data
+2. login window for admins or editors
+    - admins
+        - add/remove users 
+        - view posts reports
+        - CRUD on all posts
+    - users / editors
+        - CRUD on his/her posts
+        - can also view others posts
+        - edit profile
+        - deactivate own account
+3. 
